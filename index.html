@@ -2,26 +2,39 @@
 
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>MOORGATE</title>
+        <link rel="stylesheet" href="style.css"
     </head>
     <body>
-        <header>
-            <h1>MOORGATE</h1>
-        </header>
-        <main>
-            <div id="album-cover">
-                <img>
-            </div>
+        <div id="album-container">
 
-            <div id="track-list-container">
-                <div class="track-item"></div>
-                <div class="track-item"></div>
-                <div class="track-item"></div>
-                <div class="track-item"></div>
-            </div>
+            <header>
+                <h1>MOORGATE</h1>
+            </header>
+            <main>
+                <div id="album-cover">
+                    <img>
+                </div>
+    
+                <ul id="track-list-container">
+                    <li class="track-item">
+                        <span class="track-number">01</span>
 
-        </main>
+                        <img scr="" alt="Track 01 Cover" class="">
 
+                        <div class="track-details">
+                            <h4 class="track-name">ABC</h4>
+                            <p class="track-meta">aabbcc</p>
+                        </div>
+
+                        <audio id="audio-player" controls></audio>
+                    </li>
+                </ul>
+    
+            </main>
+        </div>
+        <script src="script.js"></script>
 
     </body>
 
