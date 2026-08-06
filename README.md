@@ -2,7 +2,7 @@
 
 ### 
 ```plaintext
-my-sonic-pi-album/
+moorgate/
 │
 ├── index.html
 ├── styles.css

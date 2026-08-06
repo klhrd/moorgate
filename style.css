@@ -1,3 +1,13 @@
+body
+{
+    background-color: #121520;
+    color: #eee;
+
+    font-family: "Marcellus", arial;
+    font-weight: 400;
+    font-style: normal;
+}
+
 #album-container
 {
     display: flex;
@@ -6,12 +16,40 @@
     align-items: center;
 }
 
+header>h1
+{
+    margin: 0px;
+}
+
+#track-list-container
+{
+    padding: 0px;
+}
+
 .track-item
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 1px;
-    border-color: black;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+    margin: 10px;
+    border-radius: 47px;
+    
+    background-color: #ffffff50;
+}
+
+.track-number
+{
+    height: 1rem;
+    margin: 20px;
+}
+
+.track-name,
+.track-meta
+{
+    margin: 1px;
 }
 
