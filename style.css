@@ -53,3 +53,8 @@ header>h1
     margin: 1px;
 }
 
+.track-meta>a
+{
+    color: #ddd;
+    text-decoration: none;
+}
