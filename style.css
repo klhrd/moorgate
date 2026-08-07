@@ -6,6 +6,11 @@ body
     font-family: "Marcellus", arial;
     font-weight: 400;
     font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #album-container
@@ -14,6 +19,8 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    width: fit-content;
 }
 
 header>h1
@@ -43,8 +50,15 @@ header>h1
 
 .track-number
 {
-    height: 1rem;
-    margin: 20px;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+
+    background: #ffffff40;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .track-name,
