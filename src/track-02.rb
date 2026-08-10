@@ -4,7 +4,7 @@ define :play_bar do |notes, durations, accents|
     a=accents[i]
     
     if n!=:r && a>0
-      play n,release: d*0.8, amp: rrand(a*0.8,a*1.25)*0.9
+      play n,release: d*0.8, amp: rrand(a*0.8,a*1.25)
     end
     sleep d
   end
@@ -42,9 +42,9 @@ bar8_notes=[:a5 ,:c6 ,:a6 ,:g5 ,:g5 ,:e5 ,:d5 ,:r  ]
 bar8_durrs=[0.5 ,0.25,0.75,0.5 ,0.5 ,0.5 ,0.5 ,0.5 ]
 bar8_acces=[0.5 ,0.5 ,0.5 ,0.5 ,0.5 ,0.5 ,0.5 ,0.5 ]
 
-use_bpm 60
+use_bpm 55
 
-with_fx :level, amp: 1.0 do |master|
+with_fx :level, amp: 0.0 do |master|
   live_loop :master_controller do
     # intro
     control master, amp: 1.0, amp_slide: 8
@@ -82,20 +82,20 @@ with_fx :level, amp: 1.0 do |master|
       chords=[chord(:a4,:sus4),chord(:c4,:sus4),chord(:e4,:sus4),chord(:g4,:sus4)]
       
       chords.each do |target_chord|
-        play target_chord, attack: 0.5, sustain: 3, release: 0.5
+        play target_chord, attack: 0.5, sustain: 3, release: 0.5, amp: 1.5
         sleep 4
       end
       
       chords=[chord(:c5,:sus4),chord(:d5,:sus4),chord(:g5,:sus4),chord(:a5,:sus4)]
       
       chords.each do |target_chord|
-        play target_chord, attack: 0.5, sustain: 3, release: 0.5
+        play target_chord, attack: 0.5, sustain: 3, release: 0.5, amp: 1.5
         sleep 4
       end
     end
     
-    live_loop :piano_melody do
-      use_synth :piano
+    live_loop :melody_2 do
+      use_synth :fm
       
       notes_a=[:a4 ,:c4 ,:e4 ,:a4 ]
       notes_b=[:d4 ,:e4 ,:g4 ,:a4 ]
@@ -105,22 +105,22 @@ with_fx :level, amp: 1.0 do |master|
       notes_f=[:d4 ,:g4 ,:a4 ,:c5 ]
       notes_g=[:e4 ,:a4 ,:d5 ,:e5 ]
       
-      notes_a.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_b.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_a.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_c.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_a.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_b.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_a.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_c.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_e.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_f.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_e.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_g.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_e.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_f.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_e.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
-      notes_g.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.5; sleep 1}
+      notes_a.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_b.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_a.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_c.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_a.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_b.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_a.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_c.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_e.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_f.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_e.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_g.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_e.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_f.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_e.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
+      notes_g.each { |n| play n, attack: 0.2, sustain: 0.9, release: 0.2, amp: 0.15; sleep 1}
     end
     
     live_loop :texture do

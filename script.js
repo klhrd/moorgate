@@ -73,7 +73,6 @@ function animate()
             
             if(dist<mouse.radius)
             {
-                console.log("hi")
                 ctx.strokeStyle=`rgba(255,255,255,${1-dist/mouse.radius})`;
                 ctx.lineWidth=0.5;
                 ctx.beginPath();
